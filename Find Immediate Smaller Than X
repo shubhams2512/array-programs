@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<limits.h>
+#include<stdlib.h>
+int main()
+{
+    int i,j,n,a[10000],num,key,k=0;
+    num=INT_MAX;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    scanf("%d",&key);
+    for(i=0;i<n;i++)
+    {
+        if(a[i]<key && (abs(a[i]-key)<num))
+        {
+            k=a[i];
+        }
+    }
+    printf("%d",k);
+}

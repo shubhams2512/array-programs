@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    
+    int i,j,a[1000],n,max=0,maxx=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        max+=a[i];
+        if(max<0){max=0;}
+        if(max>maxx)
+        {
+            maxx=max;
+        }
+         }
+    printf("%d",maxx);
+}

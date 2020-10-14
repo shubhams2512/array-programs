@@ -1,0 +1,33 @@
+/*given an array nums write a function to move all 0's to the end of it while mauntaining the relative otder of the non zero elements 
+exa,ple:
+input: 0,1,0,3,12
+output:1,3,12,0,0
+*/
+#include<iostream>
+using namespace std;
+int main()
+{
+int arr[1000],i,j,k,n,temp;
+cin>>n;
+for(i=0;i<n;i++)
+{
+cin>>arr[i];
+}
+k=0;
+for(i=0;i<n;i++)
+{
+if(arr[i]!=0)
+{
+temp=arr[i];
+arr[i]=arr[k];
+arr[k]=temp;
+k++;
+}
+}
+for(i=0;i<n;i++)
+
+{
+cout<<arr[i]<<" ";
+}
+}
+

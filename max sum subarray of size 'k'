@@ -1,0 +1,29 @@
+/*
+Given an array of positive numbers and a positive number k find the maximum sum of any subarray of size k
+input: 2,1,5,1,3,2  k=3
+output:9
+explaination : [5,1,3];
+*/
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+int i,j,k,n,arr[100000],sum,max=INT_MIN;
+cin>>n;
+for(i=0;i<n;i++)
+{
+cin>>arr[i];
+}
+cin>>k;
+for(i=0;i<n-k+1;i++)
+{
+sum=0;
+for(j=i;j<i+k;j++)
+{
+sum=sum+arr[j];
+}
+if(sum>max)
+{max=sum;
+}}
+cout<<max;
+}
